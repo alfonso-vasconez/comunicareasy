@@ -1,4 +1,4 @@
-## Comunicareasy
+# Comunicareasy
 
 An Augmentative and Alternative Communication (AAC) application developed in Python for stroke patients and their caregivers.
 
@@ -9,34 +9,42 @@ Individuals who suffer recurrent strokes often experience progressive loss of sp
 To provide a clean, high-contrast, and easy-to-use "tap-to-talk" interface that helps patients with communication difficulties express basic needs, emotions, and everyday phrases quickly and without cognitive friction.
 
 ## Technologies Used
-* Language: Python 3
-* Graphical Interface: Flet
-* Version Control: Git and GitHub
+- **Language:** Python 3
+- **Graphical Interface:** Flet
+- **Version Control:** Git and GitHub
 
 ## Repository Structure
-comunicareasyl/
-├── .gitignore # Files and folders excluded from Git
-├── LICENSE # Open-source license (MIT)
-├── README.md # Main project documentation
-├── requirements.txt # Python dependencies
-└── app.py # Main application file
+```text
+comunicareasy/
+├── .gitignore            # Files and folders excluded from Git
+├── LICENSE               # Open-source license (MIT)
+├── README.md             # Main project documentation
+├── requirements.txt      # Python dependencies
+└── app.py                # Main application file
+```
 
 ## Local Installation and Execution
 
 Follow these steps to clone and run the project on your machine (using WSL2 Ubuntu or a compatible terminal is recommended):
+```bash
+# 1. (Optional for Debian/Ubuntu) Ensure python venv support is installed
+sudo apt update && sudo apt install python3-venv
 
-1. Clone the repository:
+# 2. Clone the repository
 git clone https://github.com/alfonso-vasconez/comunicareasy.git
-cd comunicarfácil
+cd comunicareasy
 
-2. Create and activate a virtual environment:
+# 3. Create and activate a virtual environment
 python3 -m venv venv
-source venv/bin/activate # On Windows: venv\Scripts\activate
+source venv/bin/activate  # On Windows: venv\Scripts\activate
 
-3. Install dependencies:
+# 4. Install dependencies
+pip install --upgrade pip
 pip install -r requirements.txt
 
-4. Run the application:
+# 5. Run the application
+python3 app.py
+```
 
 
 ## Roadmap Phases
