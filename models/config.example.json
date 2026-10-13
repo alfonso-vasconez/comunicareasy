@@ -1,8 +1,8 @@
 {
-  "current_patient_id": "person1",
+  "current_patient_id": "patient1",
   "patients": [
     {
-      "id": "person1",
+      "id": "patient1",
       "name": "Juan Pérez",
       "routines": [
         {
