@@ -16,11 +16,18 @@ To provide a clean, high-contrast, and easy-to-use "tap-to-talk" interface that 
 ## Repository Structure
 ```text
 comunicareasy/
-├── .gitignore            # Files and folders excluded from Git
-├── LICENSE               # Open-source license (MIT)
-├── README.md             # Main project documentation
-├── requirements.txt      # Python dependencies
-└── app.py                # Main application file
+├── models/
+│   ├── __init__.py
+│   ├── config.example.json
+│   └── data_manager.py
+├── tests/
+│    ├── __init__.py
+│    └── test_data_manager.py
+├── .gitignore
+├── LICENSE                     # Open-source license (MIT)
+├── README.md                   # Main project documentation
+├── app.py                      # Main application file
+└── requirements.txt            # Python dependencies
 ```
 
 ## Local Installation and Execution
