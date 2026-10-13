@@ -1,0 +1,47 @@
+{
+  "current_patient_id": "patient1",
+  "patients": [
+    {
+      "id": "person1",
+      "name": "Juan Pérez",
+      "routines": [
+        {
+          "id": "routine1",
+          "name": "Rutina Día",
+          "categories": [
+            {
+              "id": "category1",
+              "name": "Comida",
+              "cards": [
+                {
+                  "id": "card1",
+                  "title": "Tengo hambre",
+                  "icon": "restaurant",
+                  "custom_image": null
+                },
+                {
+                  "id": "card2",
+                  "title": "Quiero agua",
+                  "icon": "water_drop",
+                  "custom_image": null
+                },
+                {
+                  "id": "card3",
+                  "title": "Quiero fruta",
+                  "icon": "apple",
+                  "custom_image": null
+                },
+                {
+                  "id": "card4",
+                  "title": "No quiero más",
+                  "icon": "cancel",
+                  "custom_image": null
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
