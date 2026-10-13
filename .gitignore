@@ -1,11 +1,13 @@
 # Virtual environments
 venv/
 
-# Python cahce
+# Python cache
 __pycache__/
+.pytest_cache/
 
 # Visual Studio Code
 .vscode/
 
-# App local configuration
+# App local configuration / App cache
 models/config.json
+.flet/
