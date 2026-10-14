@@ -32,26 +32,46 @@ comunicareasy/
 
 ## Local Installation and Execution
 
-Follow these steps to clone and run the project on your machine (using WSL2 Ubuntu or a compatible terminal is recommended):
-```bash
-# 1. (Optional for Debian/Ubuntu) Ensure python venv support is installed
-sudo apt update && sudo apt install python3-venv
+Install Git and Python 3.10 or newer before starting. On Windows, install Python from
+[python.org](https://www.python.org/downloads/) with the Python launcher enabled.
+On macOS and Linux, use a Python 3.10+ installation.
 
-# 2. Clone the repository
+Open a terminal in the folder where you want the project, then run:
+
+```text
 git clone https://github.com/alfonso-vasconez/comunicareasy.git
 cd comunicareasy
-
-# 3. Create and activate a virtual environment
-python3 -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-
-# 4. Install dependencies
-pip install --upgrade pip
-pip install -r requirements.txt
-
-# 5. Run the application
-python3 app.py
 ```
+
+Then follow **only** the instructions for your operating system and terminal.
+Run each command from the `comunicareasy` folder.
+
+### Windows (PowerShell)
+
+These commands use the virtual environment's Python directly, so activation and
+PowerShell execution-policy changes are not needed:
+
+```powershell
+py -3 -m venv .venv
+.\.venv\Scripts\python.exe -m pip install --upgrade pip
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+.\.venv\Scripts\python.exe app.py
+```
+
+### macOS or Linux (Bash or Zsh)
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+python app.py
+```
+
+The final command starts Comunicareasy. Keep the terminal open while using the
+application. If `python3 -m venv .venv` reports that `venv` is unavailable on
+Debian or Ubuntu, install it with `sudo apt install python3-venv` and repeat the
+setup commands.
 
 
 ## Roadmap Phases
