@@ -1,2 +1,2 @@
-flet==1.0.4
+flet[all]
 pytest==9.1.1
