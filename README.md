@@ -16,18 +16,20 @@ To provide a clean, high-contrast, and easy-to-use "tap-to-talk" interface that 
 ## Repository Structure
 ```text
 comunicareasy/
-├── models/
-│   ├── __init__.py
-│   ├── config.example.json
-│   └── data_manager.py
+├── src/
+│   ├── assets/              
+│   ├── models/                     # Data management and user data template (data_manager.py, etc.)
+│   │   ├── __init__.py
+│   │   ├── config.example.json
+│   │   └── data_manager.py
+│   └── main.py                     # App
 ├── tests/
-│    ├── __init__.py
-│    └── test_data_manager.py
+│   ├── __init__.py
+│   └── test_data_manager.py
 ├── .gitignore
-├── LICENSE                     # Open-source license (MIT)
-├── README.md                   # Main project documentation
-├── app.py                      # Main application file
-└── requirements.txt            # Python dependencies
+├── LICENSE
+├── README.md
+└── pyproject.toml
 ```
 
 ## Local Installation and Execution

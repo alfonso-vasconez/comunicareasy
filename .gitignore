@@ -1,13 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+
 # Virtual environments
 .venv/
+venv/
+env/
 
-# Python cache
-__pycache__/
+# Environments / secrets
+.env
+
+# Tool caches
+.mypy_cache/
+.ruff_cache/
 .pytest_cache/
 
-# Visual Studio Code
+# Flet
+.flet/
+build/
+
+# IDE
+.idea/
 .vscode/
 
-# App local configuration / App cache
-models/config.json
-.flet/
+# macOS
+.DS_Store
+
+# App local configuration
+src/models/config.json
