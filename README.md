@@ -2,6 +2,20 @@
 
 An Augmentative and Alternative Communication (AAC) application developed in Python for stroke patients and their caregivers.
 
+<p align="center">
+  <img src="docs/images/demo.png" alt="Pantalla Principal de Comunicareasy" width="200">
+</p>
+
+<details>
+<summary>More (upcoming) screenshots</summary>
+
+<br>
+
+![Configuration](docs/images/settings.png)
+
+
+</details>
+
 ## Background
 Individuals who suffer recurrent strokes often experience progressive loss of speech (aphasia). They are also frequently left with mobility in only one arm (hemiparesis). Consequently, a simple communication tool helps both patients and their caregivers communicate more easily.
 
@@ -17,6 +31,9 @@ To provide a clean, high-contrast, and easy-to-use "tap-to-talk" interface that 
 ## Repository Structure
 ```text
 comunicareasy/
+├── docs/
+│   └── images/
+│       └── demo.png
 ├── src/
 │   ├── assets/              
 │   ├── models/                     # Data management and user data template
