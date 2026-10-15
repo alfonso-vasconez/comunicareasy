@@ -11,6 +11,7 @@ To provide a clean, high-contrast, and easy-to-use "tap-to-talk" interface that 
 ## Technologies Used
 - **Language:** Python 3
 - **Graphical Interface:** Flet
+- **Package Management:** uv & pyproject.toml
 - **Version Control:** Git and GitHub
 
 ## Repository Structure
@@ -18,63 +19,61 @@ To provide a clean, high-contrast, and easy-to-use "tap-to-talk" interface that 
 comunicareasy/
 ├── src/
 │   ├── assets/              
-│   ├── models/                     # Data management and user data template (data_manager.py, etc.)
+│   ├── models/                     # Data management and user data template
 │   │   ├── __init__.py
 │   │   ├── config.example.json
 │   │   └── data_manager.py
-│   └── main.py                     # App
+│   └── main.py                     # Main application entry point
 ├── tests/
 │   ├── __init__.py
 │   └── test_data_manager.py
 ├── .gitignore
 ├── LICENSE
 ├── README.md
-└── pyproject.toml
+├── pyproject.toml
+└── uv.lock
 ```
 
 ## Local Installation and Execution
 
-Install Git and Python 3.10 or newer before starting. On Windows, install Python from
-[python.org](https://www.python.org/downloads/) with the Python launcher enabled.
-On macOS and Linux, use a Python 3.10+ installation.
+Ensure you have Git and Python 3.10 or newer installed on your system. This project uses uv for fast, reliable dependency and environment management.
 
 Open a terminal in the folder where you want the project, then run:
 
-```text
+```
 git clone https://github.com/alfonso-vasconez/comunicareasy.git
 cd comunicareasy
 ```
+If you don't have uv installed yet, you can quickly install it using your terminal:
 
-Then follow **only** the instructions for your operating system and terminal.
-Run each command from the `comunicareasy` folder.
-
-### Windows (PowerShell)
-
-These commands use the virtual environment's Python directly, so activation and
-PowerShell execution-policy changes are not needed:
-
-```powershell
-py -3 -m venv .venv
-.\.venv\Scripts\python.exe -m pip install --upgrade pip
-.\.venv\Scripts\python.exe -m pip install -r requirements.txt
-.\.venv\Scripts\python.exe app.py
+Linux / macOS: 
+```bash 
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+Windows (PowerShell): 
+```powershell 
+powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
 ```
 
-### macOS or Linux (Bash or Zsh)
+If the terminal doesn't recognize uv after installation, restart it to update the environment variables. You can also temporarily register the path by running the environment command that the terminal itself prompts you for after installation in your current session.
+
+Check that the installation was successful by running:
+```
+uv --version
+```
+Once uv is ready, set up the project and run the application:
 
 ```bash
-python3 -m venv .venv
-source .venv/bin/activate
-python -m pip install --upgrade pip
-python -m pip install -r requirements.txt
-python app.py
+# Synchronize dependencies and set up the virtual environment automatically
+uv sync
+
+# Run the application
+uv run flet run src/main.py
 ```
-
-The final command starts Comunicareasy. Keep the terminal open while using the
-application. If `python3 -m venv .venv` reports that `venv` is unavailable on
-Debian or Ubuntu, install it with `sudo apt install python3-venv` and repeat the
-setup commands.
-
+To run the unit tests with pytest:
+```bash
+uv run pytest
+```
 
 ## Roadmap Phases
 - [x] Phase 1: Initial environment and repository setup.
